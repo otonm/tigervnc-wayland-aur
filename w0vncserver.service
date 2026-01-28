@@ -1,0 +1,17 @@
+[Unit]
+Description=TigerVNC Wayland VNC Server
+After=graphical-session.target
+Requires=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/w0vncserver -AlwaysShared -SecurityTypes None
+Restart=on-failure
+RestartSec=5
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=graphical-session.target
