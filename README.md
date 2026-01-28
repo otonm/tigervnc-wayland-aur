@@ -12,21 +12,9 @@ This package provides TigerVNC server binaries for Arch Linux:
 
 ## Installation
 
-### From AUR
-
 ```bash
-# Using yay
-yay -S tigervnc-server
-
-# Using paru
-paru -S tigervnc-server
-```
-
-### Manual Build
-
-```bash
-git clone https://aur.archlinux.org/tigervnc-server.git
-cd tigervnc-server
+git clone https://github.com/otonm/tigervnc-wayland-aur.git
+cd tigervnc-wayland-aur
 makepkg -si
 ```
 
@@ -77,12 +65,8 @@ Configuration files are located in `/etc/tigervnc/`:
 ## Notes
 
 - This package conflicts with the official `tigervnc` package
-- The viewer component is not included (server-only package)
+- The viewer component is not included
 - w0vncserver requires a running PipeWire session and appropriate portal backend for your desktop environment
-
-## License
-
-GPL-2.0-or-later
 
 ## Links
 
